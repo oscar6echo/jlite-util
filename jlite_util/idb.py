@@ -114,7 +114,9 @@ class IndexedDB:
         """"""
         IDBOpenDBRequest = await self.get_IDBOpenDBRequest()
         mode = "readonly"
-        IDBObjectStore = await self.get_IDBObjectStore(IDBOpenDBRequest, store_name, mode)
+        IDBObjectStore = await self.get_IDBObjectStore(
+            IDBOpenDBRequest, store_name, mode
+        )
         value = await self._get_all(IDBObjectStore)
         return value
 
@@ -122,7 +124,9 @@ class IndexedDB:
         """"""
         IDBOpenDBRequest = await self.get_IDBOpenDBRequest()
         mode = "readonly"
-        IDBObjectStore = await self.get_IDBObjectStore(IDBOpenDBRequest, store_name, mode)
+        IDBObjectStore = await self.get_IDBObjectStore(
+            IDBOpenDBRequest, store_name, mode
+        )
         value = await self._get(IDBObjectStore, key)
         return value
 
@@ -130,7 +134,9 @@ class IndexedDB:
         """"""
         IDBOpenDBRequest = await self.get_IDBOpenDBRequest()
         mode = "readwrite"
-        IDBObjectStore = await self.get_IDBObjectStore(IDBOpenDBRequest, store_name, mode)
+        IDBObjectStore = await self.get_IDBObjectStore(
+            IDBOpenDBRequest, store_name, mode
+        )
         value = await self._put(IDBObjectStore, value, key)
         return value
 
@@ -138,6 +144,8 @@ class IndexedDB:
         """"""
         IDBOpenDBRequest = await self.get_IDBOpenDBRequest()
         mode = "readwrite"
-        IDBObjectStore = await self.get_IDBObjectStore(IDBOpenDBRequest, store_name, mode)
+        IDBObjectStore = await self.get_IDBObjectStore(
+            IDBOpenDBRequest, store_name, mode
+        )
         value = await self._delete(IDBObjectStore, key)
         return value
