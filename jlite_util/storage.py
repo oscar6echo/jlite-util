@@ -1,4 +1,4 @@
-from .idb import IndexedDB
+from .indexed_db import IndexedDB
 
 
 class Storage:
